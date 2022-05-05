@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow: scroll;
+}
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+nav{
+  padding:  20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-color: black ;
+  color: white;
+  align-items: center;
+}
+.menu-icon{
+  display: none;
+  color: white;
+  font-weight: bold;
+}
+.logo{
+  font-weight: 600;
+  font-size: 20px;
+}
+.logo span{
+  color: red;
+  font-weight: bold;
+}
+.nav-link{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link ul{
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+}
+.nav-link ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+  font-weight: 25px;
+  padding: 5px 10px;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+.nav-link li a:hover,
+.nav-link li a.active{
+  background-color: red;
+  border-radius: 4px;
+}
+
+.menu-icon{
+  cursor: pointer;
+}
+ .cross{
+  transform: rotate(360deg);
+  transition: all 0.2s ease-in-out;
+}
+ .hamburger{
+  transform: rotate(180deg);
+  transition: all 0.2s ease-in-out;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1210px) {
+  .logo{
+    font-size: 18px;
+  }
+  .nav-link ul li a{
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1099px) {
+  /* .logo{
+    font-size: 16px;
+  }
+  .nav-link ul li a{
+    font-size: 18px;
+  } */
+  .menu-icon{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+    font-size: 24px;
+  }
+  .nav-link ul{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 66px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.86);
+  transition: all 0.6s ease-in-out;
+  }
+  .nav-link ul li {
+    /* border: 1px solid red ; */
+    justify-content: space-around;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .nav-link ul li:first-child{
+    margin-top: 20px;
+  }
+
+  .nav-link.close{
+    position: absolute;
+     right: 0; 
+    transition: all 0.6s ease-in-out;
+    overflow: hidden;
+  }
+  .card{
+    z-index: -1;
+  }
+}
+
+
+ 
